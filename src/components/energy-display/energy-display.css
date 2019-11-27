@@ -1,0 +1,36 @@
+.energyList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -1%;
+  padding: 0;
+}
+
+.energyItem {
+  width: 48%;
+  margin: 1% 1%;
+}
+
+.lastUpdatedTime {
+  display: block;
+  margin-bottom: 30px;
+  color: #a1a1a1;
+}
+
+.pageTitle {
+  line-height: 1.3;
+}
+
+@media only screen and (min-width : 761px) {
+  .energyItem {
+    width: 23%;
+  }
+}
+
+@media only screen and (min-width : 1201px) {
+  .energyItem {
+    width: 18%;
+  }
+}

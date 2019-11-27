@@ -1,0 +1,40 @@
+.energyBox {
+  background: #f1f1f1;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.energyBox::before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.energyBoxTitle {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: block;
+  color: #3ad29c;
+}
+
+.energyBoxPerc {
+  font-size: 2rem;
+  color: #062835;
+}
+
+@media only screen and (min-width : 500px) {
+  .energyBoxPerc {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width : 1201px) {
+  .energyBoxPerc {
+    font-size: 4rem;
+  }
+}

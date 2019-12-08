@@ -7,6 +7,10 @@ import { getEnergyData } from './services/get-energy-data.service'
 jest.mock("./services/get-energy-data.service");
 
 describe("<App />", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+  
   it('should display a loader', () => {
     getEnergyData.mockReturnValue(
       Promise.resolve({})

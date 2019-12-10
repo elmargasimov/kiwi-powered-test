@@ -1,4 +1,5 @@
 import axios from 'axios';
+import moment from 'moment';
 
 const getEnergyData = (url = 'https://api.carbonintensity.org.uk/generation') => (
   // Return a new promise because of the APIs error response status
@@ -20,6 +21,14 @@ const getEnergyData = (url = 'https://api.carbonintensity.org.uk/generation') =>
     })
 );
 
+
+const getSettlementPeriod = (from) => {
+  const start = moment().startOf('day');
+  const diff = moment(from).diff(start, 'minutes');
+  return (diff / 30) + 1;
+};
+
 export {
-  getEnergyData
+  getEnergyData,
+  getSettlementPeriod
 };

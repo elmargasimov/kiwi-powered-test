@@ -2,12 +2,13 @@ import React from 'react';
 import css from './energy-display.css';
 import PropTypes from 'prop-types';
 import EnergyBox from '../energy-box/energy-box';
+import { getSettlementPeriod } from '../../services/get-energy-data.service';
 
 const EnergyDisplay = ({...props}) => (
   <section>
     <h1 className={css.pageTitle}>GB Electricity National Grid Demand and Output per Production Type</h1>
     <p className={css.lastUpdatedTime}>
-      Last updated on {new Date(props.data.from).toGMTString()}
+      Settlement period: {getSettlementPeriod(props.data.from)}
     </p>
     <ul className={css.energyList}>
       {
